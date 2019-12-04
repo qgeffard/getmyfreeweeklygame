@@ -7,8 +7,6 @@
 - Goal :
 ''Here you can find a script that will automatically add the free weekly epicgames to your library''
 
-EpicGames
-
 # Méthode Login
 - Allez sur l'url https://www.epicgames.com/id/login
 - Récup  `<input>` avec `id="email"`
