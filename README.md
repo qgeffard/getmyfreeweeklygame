@@ -1,5 +1,9 @@
-# getmyfreeweeklygame
+### Index
+**[getmyfreeweeklygame](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#getmyfreeweeklygame)**</br>
+**[Méthode Login](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#m%C3%A9thode-login)**</br>
+**[Méhode 1](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#m%C3%A9hode-1)**</br>
 
+# getmyfreeweeklygame
 - Goal :
 ''Here you can find a script that will automatically add the free weekly epicgames to your library''
 
