@@ -14,9 +14,11 @@ public class PurchaseWorkflow implements Workflow {
     public boolean execute() {
         log.info(storeEpicGames());
 
+        log.info(clickCookieAccept());
+
         log.info(clickPurchase());
         try {
-            Thread.sleep(4000);
+            Thread.sleep(5000);
         } catch (InterruptedException exception) {
             log.error("Unexpected error", exception);
             return false;
@@ -30,6 +32,8 @@ public class PurchaseWorkflow implements Workflow {
             return false;
         }
 
+        log.info(acceptRefund());
+
         return true;
     }
 
@@ -39,6 +43,11 @@ public class PurchaseWorkflow implements Workflow {
         String urlfreegame = $x("//span[text()='Gratuit maintenant']").parent().parent().parent().getAttribute("href");
         open(urlfreegame);
         return "Store EpicGames OK";
+    }
+
+    private String clickCookieAccept() {
+        $x("//button[@id='euCookieAccept']").click();
+        return "clickCookieAccept OK";
     }
 
     private String clickPurchase() {
@@ -51,5 +60,8 @@ public class PurchaseWorkflow implements Workflow {
         return "confirmPurchase OK";
     }
 
-
+    private String acceptRefund() {
+        $x("//div[@class='overlay-btn-row']/button[2]").click();
+        return "acceptRefund OK";
+    }
 }

@@ -16,7 +16,7 @@
 - [x] Saisir le mot de pass dans `<input>` avec `id="password"`
 - [x] Clic sur le `<button>` avec `id="login"`
 
-# Méhode 1
+# Méthode 1
 - [x] Go to https://www.epicgames.com/store/fr
 - [x] Récupe `"span"` Gratuit maintenant
 - [x] on remonte de 3 élément parent (jusque au `<a aria-label>`)
@@ -24,3 +24,6 @@
 - [x] Ce rendre à l'url que le`href=""` contient
 - [x] Récup le `PurchaseButton-button`
 - [x] Clic sur le `PurchaseButton-button`
+- [x] Clic sur le `Button` avec `id="euCookieAccept"`
+- [x] Récupe `<div>` avec la `class="overlay-btn-row" `
+- [x] Clic sur le `<button>` en 2éme position

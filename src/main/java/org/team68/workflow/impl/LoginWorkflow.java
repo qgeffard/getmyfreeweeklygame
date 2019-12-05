@@ -17,7 +17,7 @@ public class LoginWorkflow implements Workflow {
 
         log.info(clicLogin());
         try {
-            Thread.sleep(4000);
+            Thread.sleep(5000);
         } catch (InterruptedException exception) {
             log.error("Unexpected error", exception);
             return false;
