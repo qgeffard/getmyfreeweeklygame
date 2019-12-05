@@ -1,5 +1,7 @@
 package org.team68;
 
+import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.SelenideElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -25,9 +27,9 @@ public class GrabNewGame {
 
     private String storEpicGames() {
         open("https://www.epicgames.com/store/fr"); //Allez dans le store epicgames
-        $x("//span/a[1]()='Gratuit maintenant'"); //Récup le 1er parent du span
-//        $x("//a/div/div/span/text()='Gratuit maintenant']");
-//        $x("//a[contains(@rel, 'Gratuit maintenant')]");
+        SelenideElement element1 = $x("//span/a[1]()='Gratuit maintenant'"); //Récup le 1er parent du span
+        SelenideElement element2 = $x("//a/div/div/span/text()='Gratuit maintenant']");
+        SelenideElement element3 = $x("//a[contains(@rel, 'Gratuit maintenant')]");
         return "Store EpicGames OK";
     }
 
@@ -43,18 +45,4 @@ public class GrabNewGame {
         $x("//input[@id='email']").sendKeys(login);
         return "loginEpicGames OK";
     }
-
-//    private String clicLogin() {
-//        log.info(String.valueOf($x("//button[@id='login']").exists()));
-//        return "ClicLogin OK";
-//    }
-
-//    private static String proposalTranslation(String source) {
-//        PhantomJsDriverManager.phantomjs().setup();
-//        Configuration.headless = true;
-//        open("https://translate.google.com/?hl=fr#view=home&op=translate&sl=en&tl=fr");
-//        $x("//textarea[@id='source']").clear();
-//        $x("//textarea[@id='source']").sendKeys(source);
-//        return $x("//span[@class='tlid-translation translation']").getText();
-//    }
 }
