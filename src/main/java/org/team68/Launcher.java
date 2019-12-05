@@ -4,6 +4,10 @@ public class Launcher {
 
     public static void main(String[] args) {
         GrabNewGame grabNewGame = new GrabNewGame();
-        grabNewGame.execute();
+        try {
+            grabNewGame.execute();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }

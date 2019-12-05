@@ -39,4 +39,5 @@ hs_err_pid*
 log/
 target/
 
-
+#Binary
+build/*
