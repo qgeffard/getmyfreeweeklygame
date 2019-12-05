@@ -19,15 +19,15 @@
 # Méhode 1
 - [x] Go to https://www.epicgames.com/store/fr
 
-- [ ] Récupe `"span"` Gratuit maintenant
+- [x] Récupe `"span"` Gratuit maintenant
 
-- [ ] on remonte de 3 élément parent (jusque au `<a aria-label>`)
+- [x] on remonte de 3 élément parent (jusque au `<a aria-label>`)
 
-- [ ] Dans le `<a aria-label>` on récup le contenue de `href=""`
+- [x] Dans le `<a aria-label>` on récup le contenue de `href=""`
 
   >  https://www.swtestacademy.com/click-links-console-xpath-jquery/ 
 
-- [ ] Ce rendre à l'url que le`href=""` contient
+- [x] Ce rendre à l'url que le`href=""` contient
 
 - [ ] Récup le `PurchaseButton-button`
 
