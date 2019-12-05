@@ -14,6 +14,7 @@ public class GrabNewGame {
         log.info(passWordEpicGames("f48273g8iuoyerfwyg987234"));
         log.info(clicLogin());
         log.info(storeEpicGames());
+        log.info(clicPurchase());
         Thread.sleep(10000);
     }
 
@@ -43,4 +44,11 @@ public class GrabNewGame {
         open(urlfreegame);
         return "Store EpicGames OK";
     }
+
+    private String clicPurchase() throws InterruptedException {
+        $x("//span[text()='Obtenir']").parent().click();
+        Thread.sleep(4000);
+        return "clicPurchase OK";
+    }
+
 }

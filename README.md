@@ -29,6 +29,7 @@
 
 - [x] Ce rendre à l'url que le`href=""` contient
 
-- [ ] Récup le `PurchaseButton-button`
+- [x] Récup le `PurchaseButton-button`
 
-- [ ] Clic sur le `PurchaseButton-button`
+- [x] Clic sur le `PurchaseButton-button`
+
