@@ -8,6 +8,7 @@
         </layout>
     </appender>
 
+
     <logger name="org.team68" level="INFO" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
