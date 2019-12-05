@@ -1,7 +1,5 @@
 package org.team68;
 
-import com.codeborne.selenide.Selenide;
-import com.codeborne.selenide.SelenideElement;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,8 +13,8 @@ public class GrabNewGame {
         log.info(loginEpicGames("medequent@gmail.com"));
         log.info(passWordEpicGames("f48273g8iuoyerfwyg987234"));
         log.info(clicLogin());
-        log.info(storEpicGames());
-        Thread.sleep(4000);
+        log.info(storeEpicGames());
+        Thread.sleep(10000);
     }
 
     private String loginEpicGames(String login) {
@@ -26,20 +24,20 @@ public class GrabNewGame {
         return "loginEpicGames OK";
     }
 
-
     private String passWordEpicGames(String password) {
         $x("//input[@id='password']").clear();
         $x("//input[@id='password']").sendKeys(password);
-        return "passWordEpicGames OK";
+        return "password";
     }
 
-    private String clicLogin() {
+    private String clicLogin() throws InterruptedException {
         $x("//button[@id='login']").click();
+        Thread.sleep(4000);
         return "ClicLogin OK";
     }
 
-    private String storEpicGames() {
-        forward("https://www.epicgames.com/store/fr"); //Allez dans le store epicgames
+    private String storeEpicGames() {
+        open("https://www.epicgames.com/store/fr"); //Allez dans le store epicgames
 //        SelenideElement element1 = $x("//span/a[1]()='Gratuit maintenant'"); //Récup le 1er parent du span
         String urlfreegame = $x("//span[text()='Gratuit maintenant']").parent().parent().parent().getAttribute("href");
         open(urlfreegame);
