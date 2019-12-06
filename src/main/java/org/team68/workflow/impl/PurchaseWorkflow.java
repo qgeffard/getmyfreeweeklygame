@@ -2,6 +2,8 @@ package org.team68.workflow.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.team68.model.GamePage;
+import org.team68.model.StorePage;
 import org.team68.workflow.Workflow;
 
 import static com.codeborne.selenide.Selenide.$x;
@@ -10,69 +12,39 @@ import static com.codeborne.selenide.Selenide.open;
 public class PurchaseWorkflow implements Workflow {
     private Logger log = LoggerFactory.getLogger(PurchaseWorkflow.class);
 
+    StorePage store = new StorePage();
+
     @Override
     public boolean execute() {
-        log.info(storeEpicGames());
-        
-        log.info(clickCookieAccept());
+        // Open the store
+        store.open();
 
-        log.info(checkOwned());
+        //Accept cookies
+        store.acceptCookies();
 
-        log.info(clickPurchase());
+        //Retrieve and open the game web page
+        GamePage game = store.getFreeWeeklyGame();
+        game.open();
+
+        //If the game is already owned by the user, we can stop here the workflow
+        if(game.isAlreadyOwned())
+            return true;
+
+        // Purchase the game
         try {
-            Thread.sleep(5000);
+            game.purchase()
+                .confirmPurchase()
+                .acceptRefund();
         } catch (InterruptedException exception) {
             log.error("Unexpected error", exception);
             return false;
         }
-
-        log.info(confirmPurchase());
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException exception) {
-            log.error("Unexpected error", exception);
-            return false;
-        }
-
-        log.info(acceptRefund());
 
         return true;
     }
 
-    private String storeEpicGames() {
-        open("https://www.epicgames.com/store/fr"); //Allez dans le store epicgames
-        //TODO : manage the fact where there are more than one epic gems offered this week
-        String urlfreegame = $x("//span[text()='Gratuit maintenant']").parent().parent().parent().getAttribute("href");
-        open(urlfreegame);
-        return "Store EpicGames OK";
-    }
 
-    private String clickCookieAccept() {
-        $x("//button[@id='euCookieAccept']").click();
-        return "clickCookieAccept OK";
-    }
 
-    private String clickPurchase() {
-        $x("//span[text()='Obtenir']").parent().click();
-        return "clicPurchase OK";
-    }
 
-    private String confirmPurchase() {
-        $x("//div[@class='confirm-container row']/div/button").click();
-        return "confirmPurchase OK";
-    }
 
-    private String acceptRefund() {
-        $x("//div[@class='overlay-btn-row']/button[2]").click();
-        return "acceptRefund OK";
-    }
-
-    private String checkOwned() {
-        boolean checkOwnedButton = $x("//span[text()='Possédé']").parent().exists();
-        if (checkOwnedButton == true) {
-            return "You already have this game";
-        } else {
-            return "You don't have this game";
-        }
-    }
 }
