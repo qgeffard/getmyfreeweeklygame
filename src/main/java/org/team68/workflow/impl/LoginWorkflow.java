@@ -15,7 +15,7 @@ public class LoginWorkflow implements Workflow {
         log.info(loginEpicGames("medequent@gmail.com"));
         log.info(passWordEpicGames("f48273g8iuoyerfwyg987234"));
 
-        log.info(clicLogin());
+        log.info(clickLogin());
         try {
             Thread.sleep(5000);
         } catch (InterruptedException exception) {
@@ -38,8 +38,8 @@ public class LoginWorkflow implements Workflow {
         return "password";
     }
 
-    private String clicLogin() {
+    private String clickLogin() {
         $x("//button[@id='login']").click();
-        return "ClicLogin OK";
+        return "ClickLogin OK";
     }
 }

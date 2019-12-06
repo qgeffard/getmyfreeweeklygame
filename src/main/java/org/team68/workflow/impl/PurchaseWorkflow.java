@@ -13,8 +13,10 @@ public class PurchaseWorkflow implements Workflow {
     @Override
     public boolean execute() {
         log.info(storeEpicGames());
-
+        
         log.info(clickCookieAccept());
+
+        log.info(checkOwned());
 
         log.info(clickPurchase());
         try {
@@ -63,5 +65,14 @@ public class PurchaseWorkflow implements Workflow {
     private String acceptRefund() {
         $x("//div[@class='overlay-btn-row']/button[2]").click();
         return "acceptRefund OK";
+    }
+
+    private String checkOwned() {
+        boolean checkOwnedButton = $x("//span[text()='Possédé']").parent().exists();
+        if (checkOwnedButton == true) {
+            return "You already have this game";
+        } else {
+            return "You don't have this game";
+        }
     }
 }
