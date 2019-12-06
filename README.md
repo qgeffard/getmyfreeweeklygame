@@ -1,29 +1,19 @@
 ### Index
 **[getmyfreeweeklygame](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#getmyfreeweeklygame)**</br>
-**[Méthode Login](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#m%C3%A9thode-login)**</br>
-**[Méhode 1](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#m%C3%A9hode-1)**</br>
+**[Global](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#global)**</br>
+**[Methode +18](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#methode-18)**</br>
 
 # getmyfreeweeklygame
 - Goal :
 ''Here you can find a script that will automatically add the free weekly epicgames to your library''
 
-# Méthode Login
-- [x] Allez sur l'url https://www.epicgames.com/id/login
-- [x] Récup  `<input>` avec `id="email"`
-- [x] Récup  `<input>` avec `id="password"`
-- [x] Récup `<button>` avec `id="login"`
-- [x] Saisir l'email dans`<input>` avec `id="email"`
-- [x] Saisir le mot de pass dans `<input>` avec `id="password"`
-- [x] Clic sur le `<button>` avec `id="login"`
+# Global
+- [ ] Gérer les jeux qui demande une confirmation de **+18 ans** **[Méthode +18](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#methode-18)**</br>
+- [ ] Si EpicGameStor offre 2 jeux
+- [ ] Gérer les Logins username/password avec un vault *(https://www.vaultproject.io/)*
 
-# Méthode 1
-- [x] Go to https://www.epicgames.com/store/fr
-- [x] Récupe `"span"` Gratuit maintenant
-- [x] on remonte de 3 élément parent (jusque au `<a aria-label>`)
-- [x] Dans le `<a aria-label>` on récup le contenue de `href=""`
-- [x] Ce rendre à l'url que le`href=""` contient
-- [x] Récup le `PurchaseButton-button`
-- [x] Clic sur le `PurchaseButton-button`
-- [x] Clic sur le `Button` avec `id="euCookieAccept"`
-- [x] Récupe `<div>` avec la `class="overlay-btn-row" `
-- [x] Clic sur le `<button>` en 2éme position
+# Methode +18
+Entre la StorePage et la Page du Jeu gratuit, il y a peut étre une pop-up "plus de 18 ans."
+- [ ] Récupe `<span>Continuer</span>`
+- [ ] Remonte de 1 élement
+- [ ] Click sur le button
