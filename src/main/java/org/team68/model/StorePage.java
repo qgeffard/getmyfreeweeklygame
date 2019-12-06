@@ -9,6 +9,7 @@ import static com.codeborne.selenide.Selenide.$x;
 public class StorePage  implements Page {
     public static final String EPICGAMES_STORE_FR_URL = "https://www.epicgames.com/store/fr";
     public static final String ACCEPT_COOKIES_BUTTON = "//button[@id='euCookieAccept']";
+    public static final String CURRENT_FREE_GAME = "//span[text()='Gratuit maintenant']";
 
     public StorePage open(){
         Selenide.open(EPICGAMES_STORE_FR_URL);
@@ -17,7 +18,7 @@ public class StorePage  implements Page {
 
     public GamePage getFreeWeeklyGame() {
         //TODO : manage the fact where there are more than one epic gems offered this week
-        String urlfreegame = $x("//span[text()='Gratuit maintenant']").parent().parent().parent().getAttribute("href");
+        String urlfreegame = $x(CURRENT_FREE_GAME).parent().parent().parent().getAttribute("href");
         return new GamePage(urlfreegame);
     }
 
