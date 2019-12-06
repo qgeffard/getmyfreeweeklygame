@@ -35,9 +35,6 @@ public class PurchaseWorkflow implements Workflow {
             log.error("Unexpected error", exception);
             return false;
         }
-
         return true;
     }
-
-
 }

@@ -11,11 +11,11 @@ public class GlobalWorkflow implements Workflow {
     private Workflow purchase = new PurchaseWorkflow();
 
     @Override
-    public boolean execute() {
+    public boolean execute() throws InterruptedException {
         //login
         log.info("Starting login workflow");
         login.execute();
-        log.info("End of login workflow");
+        log.info("End login workflow");
 
         //Purchase free game
         log.info("Starting purchase workflow");

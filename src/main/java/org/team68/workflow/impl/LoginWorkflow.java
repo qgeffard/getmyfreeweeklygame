@@ -5,42 +5,26 @@ import org.slf4j.LoggerFactory;
 import org.team68.model.LoginPage;
 import org.team68.workflow.Workflow;
 
-import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.open;
-
 public class LoginWorkflow implements Workflow {
+    LoginPage login = new LoginPage();
     private Logger log = LoggerFactory.getLogger(LoginWorkflow.class);
 
     @Override
-    public boolean execute() {
-        log.info(loginEpicGames(LoginPage.USER_EMAIL));
-        log.info(passWordEpicGames(LoginPage.USER_PASSWORD));
+    public boolean execute() throws InterruptedException {
+        //Open login page
+        login.open();
 
-        log.info(clickLogin());
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException exception) {
-            log.error("Unexpected error", exception);
-            return false;
-        }
-        return true;
-    }
+        //Enter LoginEmail
+        login.email();
 
-    private String loginEpicGames(String login) {
-        open(LoginPage.EPICGAMES_LOGIN_URL);
-        $x(LoginPage.EMAIL_INPUT_BOX).clear();
-        $x(LoginPage.EMAIL_INPUT_BOX).sendKeys(login);
-        return "loginEpicGames OK";
-    }
+        //Enter Password
+        login.password();
 
-    private String passWordEpicGames(String password) {
-        $x(LoginPage.PASSWORD_INPUT_BOX).clear();
-        $x(LoginPage.PASSWORD_INPUT_BOX).sendKeys(password);
-        return "password";
-    }
+        //click in the button Login
+        login.acceptlogin();
 
-    private String clickLogin() {
-        $x(LoginPage.LOGIN_NOW_BUTTON).click();
-        return "ClickLogin OK";
+        //sleep for waiting
+        Thread.sleep(4000);
+        return false;
     }
 }
