@@ -9,9 +9,11 @@ public class GlobalWorkflow implements Workflow {
 
     private Workflow login = new LoginWorkflow();
     private Workflow purchase = new PurchaseWorkflow();
+    private Workflow discord = new DiscordWorkflow();
 
     @Override
     public boolean execute() throws InterruptedException {
+
         //login
         log.info("Starting login workflow");
         login.execute();
@@ -21,6 +23,11 @@ public class GlobalWorkflow implements Workflow {
         log.info("Starting purchase workflow");
         purchase.execute();
         log.info("End purchase workflow");
+
+        //Discord notification
+        log.info("Starting discord workflow");
+        discord.execute();
+        log.info("End discord workflow");
 
         return true;
     }

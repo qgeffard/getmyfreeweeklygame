@@ -2,11 +2,7 @@ package org.team68.model;
 
 import com.codeborne.selenide.Selenide;
 import org.team68.workflow.Page;
-
-import javax.print.DocFlavor;
-
 import static com.codeborne.selenide.Selenide.$x;
-import static com.codeborne.selenide.Selenide.open;
 
 public class LoginPage implements Page {
     public static final String EPICGAMES_LOGIN_URL = "https://www.epicgames.com/id/login";
@@ -26,7 +22,6 @@ public class LoginPage implements Page {
         $x(EMAIL_INPUT_BOX).sendKeys(USER_EMAIL);
         return this;
     }
-
 
     public LoginPage password() {
         $x(PASSWORD_INPUT_BOX).clear();

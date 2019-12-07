@@ -2,9 +2,7 @@ package org.team68.model;
 
 import com.codeborne.selenide.Selenide;
 import org.team68.workflow.Page;
-
 import static com.codeborne.selenide.Selenide.$x;
-
 
 public class StorePage  implements Page {
     public static final String EPICGAMES_STORE_FR_URL = "https://www.epicgames.com/store/fr";
