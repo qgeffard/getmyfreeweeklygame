@@ -4,15 +4,17 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.team68.workflow.Workflow;
 
+import java.io.IOException;
+
 public class GlobalWorkflow implements Workflow {
     private Logger log = LoggerFactory.getLogger(GlobalWorkflow.class);
 
-    private Workflow login = new LoginWorkflow();
-    private Workflow purchase = new PurchaseWorkflow();
-    private Workflow discord = new DiscordWorkflow();
+    private LoginWorkflow login = new LoginWorkflow();
+    private PurchaseWorkflow purchase = new PurchaseWorkflow();
+    private DiscordWorkflow discord = new DiscordWorkflow();
 
     @Override
-    public boolean execute() throws InterruptedException {
+    public boolean execute() throws InterruptedException, IOException {
 
         //login
         log.info("Starting login workflow");
@@ -26,7 +28,7 @@ public class GlobalWorkflow implements Workflow {
 
         //Discord notification
         log.info("Starting discord workflow");
-        discord.execute();
+        discord.execute(purchase.getGames());
         log.info("End discord workflow");
 
         return true;

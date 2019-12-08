@@ -6,7 +6,7 @@ import org.team68.workflow.Page;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class LoginPage implements Page {
-    public static final String EPICGAMES_LOGIN_URL = "https://www.epicgames.com/id/login";
+    public static final String URL = "https://www.epicgames.com/id/login";
     public static final String EMAIL_INPUT_BOX = "//input[@id='email']";
     public static final String PASSWORD_INPUT_BOX = "//input[@id='password']";
     public static final String LOGIN_NOW_BUTTON = "//button[@id='login']";
@@ -14,7 +14,7 @@ public class LoginPage implements Page {
     public static final String USER_PASSWORD = "f48273g8iuoyerfwyg987234";
 
     public LoginPage open() {
-        Selenide.open(EPICGAMES_LOGIN_URL);
+        Selenide.open(URL);
         return this;
     }
 

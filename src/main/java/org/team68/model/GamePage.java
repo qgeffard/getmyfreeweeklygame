@@ -8,20 +8,20 @@ import org.team68.workflow.Page;
 import static com.codeborne.selenide.Selenide.$x;
 
 public class GamePage implements Page {
+    private static Logger log = LoggerFactory.getLogger(GamePage.class);
+
+    public static final String INNER_TEXT = "innerText";
     public static final String CONFIRM_PURCHASE_BUTTON = "//div[@class='confirm-container row']/div/button";
     public static final String ACCEPT_REFUND_BUTTON = "//div[@class='overlay-btn-row']/button[2]";
-    public static final String NAME_FREE_GAME = "//title";
-    private static final String OBTAIN_SPAN = "//span[text()='Obtenir']";
-    private static final String OWNED_SPAN = "//span[text()='Possédé']";
-    private static Logger log = LoggerFactory.getLogger(GamePage.class);
+    public static final String TITLE = "//title";
+    public static final String OBTAIN_SPAN = "//span[text()='Obtenir']";
+    public static final String OWNED_SPAN = "//span[text()='Possédé']";
+
     private String url;
+    private String title;
 
     public GamePage(String url) {
         this.url = url;
-    }
-
-    public GamePage() {
-
     }
 
     public boolean isAlreadyOwned() {
@@ -31,13 +31,12 @@ public class GamePage implements Page {
     @Override
     public GamePage open() {
         Selenide.open(url);
+        this.title = $x(TITLE).getAttribute(INNER_TEXT);
         return this;
     }
 
-    public GamePage getFreeGameName() {
-        String gametitle = $x(NAME_FREE_GAME).toString();
-        log.info(gametitle);
-        return this;
+    public String getTitle() {
+        return title;
     }
 
     public GamePage purchase() throws InterruptedException {
