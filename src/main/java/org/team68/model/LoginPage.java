@@ -2,6 +2,7 @@ package org.team68.model;
 
 import com.codeborne.selenide.Selenide;
 import org.team68.workflow.Page;
+
 import static com.codeborne.selenide.Selenide.$x;
 
 public class LoginPage implements Page {
@@ -10,9 +11,9 @@ public class LoginPage implements Page {
     public static final String PASSWORD_INPUT_BOX = "//input[@id='password']";
     public static final String LOGIN_NOW_BUTTON = "//button[@id='login']";
     public static final String USER_EMAIL = "medequent@gmail.com";
-    public static final String USER_PASSWORD ="f48273g8iuoyerfwyg987234";
+    public static final String USER_PASSWORD = "f48273g8iuoyerfwyg987234";
 
-    public LoginPage open(){
+    public LoginPage open() {
         Selenide.open(EPICGAMES_LOGIN_URL);
         return this;
     }
