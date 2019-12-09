@@ -1,5 +1,7 @@
 package org.team68.workflow.impl;
 
+import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -24,17 +26,16 @@ public class DiscordWorkflow implements Workflow {
 
         String gameTitle = games.stream().findFirst().get().getTitle();
 
-        log.info("Titre du jeu : {}",gameTitle);
+        log.info("Titre du jeu : {}", gameTitle);
 
         CloseableHttpClient httpClient = HttpClientBuilder.create().build(); //Use this instead
 
-        String userId = "<@!226404349201481728>";
-        StringEntity content = new StringEntity("{\"content\":\"" + userId + " i have grab " + gameTitle + " game for you :gift:\"}");
+        String userId = "**@Michel**";
+        StringEntity content = new StringEntity("{\"content\":\"" + userId + " i have grab **" + gameTitle + "** game for you :gift:\"}");
 
         HttpPost request = new HttpPost(WEBHOOK_URL);
         request.addHeader(WEBHOOK_HEADERS_KEY, WEBHOOK_HEADERS_VALUE);
         request.setEntity(content);
-
         httpClient.execute(request);
 
     }

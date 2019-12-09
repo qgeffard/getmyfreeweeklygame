@@ -9,7 +9,7 @@ public class LoginPage implements Page {
     public static final String URL = "https://www.epicgames.com/id/login";
     public static final String EMAIL_INPUT_BOX = "//input[@id='email']";
     public static final String PASSWORD_INPUT_BOX = "//input[@id='password']";
-    public static final String LOGIN_NOW_BUTTON = "//button[@id='login']";
+    public static final String LOGIN_BUTTON = "//button[@id='login']";
     public static final String USER_EMAIL = "medequent@gmail.com";
     public static final String USER_PASSWORD = "f48273g8iuoyerfwyg987234";
 
@@ -31,7 +31,7 @@ public class LoginPage implements Page {
     }
 
     public LoginPage acceptlogin() {
-        $x(LOGIN_NOW_BUTTON).click();
+        $x(LOGIN_BUTTON).click();
         return this;
     }
 }

@@ -1,5 +1,7 @@
 package org.team68.workflow.impl;
 
+import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.team68.workflow.Workflow;
@@ -15,6 +17,9 @@ public class GlobalWorkflow implements Workflow {
 
     @Override
     public boolean execute() throws InterruptedException, IOException {
+
+        //Hide Google Chrome
+        Configuration.headless = true;
 
         //login
         log.info("Starting login workflow");

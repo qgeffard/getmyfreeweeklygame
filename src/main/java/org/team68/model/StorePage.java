@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.$x;
 
 public class StorePage implements Page {
     public static final String EPICGAMES_STORE_FR_URL = "https://www.epicgames.com/store/fr";
-    public static final String ACCEPT_COOKIES_BUTTON = "//button[@id='euCookieAccept']";
+    public static final String CLOSE_COOKIES_BUTTON = "//button[@id='euCookieAccept']";
     public static final String CURRENT_FREE_GAME = "//span[text()='Gratuit maintenant']";
 
     public StorePage open() {
@@ -22,7 +22,7 @@ public class StorePage implements Page {
     }
 
     public void acceptCookies() {
-        if ($x(ACCEPT_COOKIES_BUTTON).exists())
-            $x(ACCEPT_COOKIES_BUTTON).click();
+        if ($x(CLOSE_COOKIES_BUTTON).exists())
+            $x(CLOSE_COOKIES_BUTTON).click();
     }
 }
