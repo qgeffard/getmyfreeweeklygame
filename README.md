@@ -6,8 +6,9 @@
 
 ## Index
 **[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**</br>
-_[JRE 1.8.0]()_</br>
-_[MariaDB 10.4]()_</br>
+_[Google Chrome](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-google-chrome)_</br>
+_[JRE 1.8.0](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-jre-180)_</br>
+_[MariaDB 10.4](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-mariadb-104)_</br>
 **[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**</br>
 
 ## Installation
