@@ -1,12 +1,14 @@
+## getmyfreeweeklygame
+''Here you can find a script that will automatically add the free weekly epicgames to your library''
+
+<p align="center">
+<a href=https://github.com/qgeffard/getmyfreeweeklygame/releases><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/qgeffard/getmyfreeweeklygame?include_prereleases"></p>
+
 ### Index
-**[getmyfreeweeklygame](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#getmyfreeweeklygame)**</br>
 **[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**</br>
 **[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**</br>
 
-# getmyfreeweeklygame
-''Here you can find a script that will automatically add the free weekly epicgames to your library''
-
-# Installation
+## Installation
 **Install Google Chrome**
 
 ```bash
@@ -53,5 +55,5 @@ Output
 mariadb  Ver 15.1 Distrib 10.4.10-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
 ```
 
-# Sources
+## Sources
 *Installation de Mariadb : https://www.tecmint.com/install-mariadb-in-ubuntu-and-debian/*
