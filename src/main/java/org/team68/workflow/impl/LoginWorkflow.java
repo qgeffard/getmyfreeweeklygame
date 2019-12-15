@@ -6,8 +6,9 @@ import org.team68.model.LoginPage;
 import org.team68.workflow.Workflow;
 
 public class LoginWorkflow implements Workflow {
-    LoginPage login = new LoginPage();
     private Logger log = LoggerFactory.getLogger(LoginWorkflow.class);
+    LoginPage login = new LoginPage();
+
 
     @Override
     public boolean execute() throws InterruptedException {

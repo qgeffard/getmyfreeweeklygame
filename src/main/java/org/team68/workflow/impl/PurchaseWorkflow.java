@@ -10,8 +10,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PurchaseWorkflow implements Workflow {
-    StorePage store = new StorePage();
     private Logger log = LoggerFactory.getLogger(PurchaseWorkflow.class);
+    StorePage store = new StorePage();
 
     private List<GamePage> games = new ArrayList<>();
 
