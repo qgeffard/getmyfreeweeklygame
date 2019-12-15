@@ -4,12 +4,14 @@
 <p align="center">
 <a href=https://github.com/qgeffard/getmyfreeweeklygame/releases><img alt="GitHub release (latest by date including pre-releases)" src="https://img.shields.io/github/v/release/qgeffard/getmyfreeweeklygame?include_prereleases"></p>
 
-### Index
+## Index
 **[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**</br>
+_[JRE 1.8.0]()_</br>
+_[MariaDB 10.4]()_</br>
 **[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**</br>
 
 ## Installation
-**Install Google Chrome**
+#### Install Google Chrome
 
 ```bash
 $ sudo apt-get update
@@ -23,7 +25,7 @@ $ google-chrome -version
 Output
 Google Chrome 78.0.3904.108
 ```
-**Install JRE 1.8.0**
+#### Install JRE 1.8.0
 
 ```bash
 $ sudo apt-get update
@@ -39,7 +41,7 @@ openjdk version "1.8.0_232"
 OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)
 OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)
 ```
-**Install MariaDB 10.4**
+#### Install MariaDB 10.4
 
 ```bash
 $sudo apt-get update
