@@ -1,7 +1,7 @@
 ### Index
-**[getmyfreeweeklygame](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#getmyfreeweeklygame)**
-**[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**
-**[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**
+**[getmyfreeweeklygame](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#getmyfreeweeklygame)**</br>
+**[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**</br>
+**[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**</br>
 
 # getmyfreeweeklygame
 ''Here you can find a script that will automatically add the free weekly epicgames to your library''
