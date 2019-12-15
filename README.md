@@ -8,7 +8,6 @@
 **[Installation](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#installation)**</br>
 _[Google Chrome](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-google-chrome)_</br>
 _[JRE 1.8.0](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-jre-180)_</br>
-_[MariaDB 10.4](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#install-mariadb-104)_</br>
 **[Sources](https://github.com/qgeffard/getmyfreeweeklygame/blob/master/README.md#sources)**</br>
 
 ## Installation
@@ -41,21 +40,6 @@ Output
 openjdk version "1.8.0_232"
 OpenJDK Runtime Environment (build 1.8.0_232-8u232-b09-1~deb9u1-b09)
 OpenJDK 64-Bit Server VM (build 25.232-b09, mixed mode)
-```
-#### Install MariaDB 10.4
-
-```bash
-$sudo apt-get update
-$sudo sudo apt-get install mariadb-server
-```
-Vérifier la version de MariaDB
-```bash 
-$ mariadb -V
-```
-
-```
-Output
-mariadb  Ver 15.1 Distrib 10.4.10-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
 ```
 
 ## Sources
