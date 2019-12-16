@@ -21,12 +21,12 @@ public class CollectionPage implements Page {
         return this;
     }
 
-    public CollectionPage acceptCookies() {
+    public void acceptCookies() {
         if ($x(CLOSE_COOKIES_BUTTON).exists())
             $x(CLOSE_COOKIES_BUTTON).click();
     }
 
-    public CollectionPage getFirstFreeGame() throws InterruptedException {
+    public void getFirstFreeGame() throws InterruptedException {
         if ($x(FIRST_FREE_GAME).exists()) {
             String currentFreeGame = (FIRST_FREE_GAME);
             String currentFreeGameUrl = $x(FIRST_FREE_GAME).getAttribute("href");
@@ -38,7 +38,7 @@ public class CollectionPage implements Page {
         }
     }
 
-    public CollectionPage getSecondFreeGame() throws InterruptedException {
+    public void getSecondFreeGame() throws InterruptedException {
         if ($x(SECOND_FREE_GAME).exists()) {
             String currentFreeGame = (SECOND_FREE_GAME);
             String currentFreeGameUrl = $x(SECOND_FREE_GAME).getAttribute("href");
@@ -50,7 +50,7 @@ public class CollectionPage implements Page {
         }
     }
 
-    public CollectionPage getThirdFreeGame() throws InterruptedException {
+    public void getThirdFreeGame() throws InterruptedException {
         if ($x(THIRD_FREE_GAME).exists()) {
             String currentFreeGame = (THIRD_FREE_GAME);
             String currentFreeGameUrl = $x(THIRD_FREE_GAME).getAttribute("href");
@@ -62,7 +62,7 @@ public class CollectionPage implements Page {
         }
     }
 
-    public CollectionPage getFourthFreeGame() throws InterruptedException {
+    public void getFourthFreeGame() throws InterruptedException {
         if ($x(FOURTH_FREE_GAME).exists()) {
             String currentFreeGame = (FOURTH_FREE_GAME);
             String currentFreeGameUrl = $x(FOURTH_FREE_GAME).getAttribute("href");
@@ -74,7 +74,7 @@ public class CollectionPage implements Page {
         }
     }
 
-    public CollectionPage getFifthFreeGame() throws InterruptedException {
+    public void getFifthFreeGame() throws InterruptedException {
         if ($x(FIFTH_FREE_GAME).exists()) {
             String currentFreeGame = (FIFTH_FREE_GAME);
             String currentFreeGameUrl = $x(FIFTH_FREE_GAME).getAttribute("href");
@@ -86,7 +86,7 @@ public class CollectionPage implements Page {
         }
     }
 
-    public CollectionPage getSixthFreeGame() throws InterruptedException {
+    public void getSixthFreeGame() throws InterruptedException {
         if ($x(SIXTH_FREE_GAME).exists()) {
             String currentFreeGame = (SIXTH_FREE_GAME);
             String currentFreeGameUrl = $x(SIXTH_FREE_GAME).getAttribute("href");
