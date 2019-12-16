@@ -1,12 +1,11 @@
 package org.team68.workflow.impl;
 
-import com.codeborne.selenide.Configuration;
-import io.github.bonigarcia.wdm.PhantomJsDriverManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.team68.workflow.Workflow;
 
 import java.io.IOException;
+
 
 public class GlobalWorkflow implements Workflow {
     private Logger log = LoggerFactory.getLogger(GlobalWorkflow.class);
@@ -19,7 +18,7 @@ public class GlobalWorkflow implements Workflow {
     public boolean execute() throws InterruptedException, IOException {
 
         //Hide Google Chrome
-        Configuration.headless = true;
+//        Configuration.headless = true;
 
         //login
         log.info("Starting login workflow");
@@ -32,10 +31,9 @@ public class GlobalWorkflow implements Workflow {
         log.info("End purchase workflow");
 
         //Discord notification
-        log.info("Starting discord workflow");
-        discord.execute(purchase.getGames());
-        log.info("End discord workflow");
-
-        return true;
+//        log.info("Starting discord workflow");
+//        discord.execute();
+//        log.info("End discord workflow");
+        return false;
     }
 }
