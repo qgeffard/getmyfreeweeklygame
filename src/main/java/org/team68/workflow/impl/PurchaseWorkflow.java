@@ -2,8 +2,8 @@ package org.team68.workflow.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.team68.model.CollectionPage;
 import org.team68.model.GamePage;
-import org.team68.model.StorePage;
 import org.team68.workflow.Workflow;
 
 import java.util.ArrayList;
@@ -11,40 +11,35 @@ import java.util.List;
 
 public class PurchaseWorkflow implements Workflow {
     private Logger log = LoggerFactory.getLogger(PurchaseWorkflow.class);
-    StorePage store = new StorePage();
-
+    CollectionPage collection = new CollectionPage();
+    GamePage game = new GamePage();
     private List<GamePage> games = new ArrayList<>();
 
     @Override
-    public boolean execute() {
-        // Open the store
-        store.open();
+    public boolean execute() throws InterruptedException {
+        // Open the collection game
+        collection.open();
+
+        //sleep for waiting
+        Thread.sleep(5000);
 
         //Accept cookies
-        store.acceptCookies();
+        collection.acceptCookies();
 
-        //Retrieve and open the game web page
-        GamePage game = store.getFreeWeeklyGame();
-        this.games.add(game);
-        game.open();
+        //sleep for waiting
+        Thread.sleep(5000);
 
-        //If the game is already owned by the user, we can stop here the workflow
-        if (game.isAlreadyOwned())
+        //Retrieve and open the first game web page
+        collection.getFirstFreeGame();
+        if (game.isAlreadyOwned()) {
             return true;
-
-        // Purchase the game
-        try {
-            game.purchase()
-                    .confirmPurchase()
-                    .acceptRefund();
-        } catch (InterruptedException exception) {
-            log.error("Unexpected error", exception);
-            return false;
+        } else {
+            // Purchase the game
+//            game.purchase()
+//                    .confirmPurchase()
+//                    .acceptRefund();
+            System.out.println("Jeux 1 a achetez");
+            return true;
         }
-        return true;
-    }
-
-    public List<GamePage> getGames() {
-        return games;
     }
 }

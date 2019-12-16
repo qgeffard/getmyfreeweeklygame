@@ -25,7 +25,7 @@ public class LoginWorkflow implements Workflow {
         login.acceptlogin();
 
         //sleep for waiting
-        Thread.sleep(4000);
-        return true;
+        Thread.sleep(3000);
+        return false;
     }
 }
