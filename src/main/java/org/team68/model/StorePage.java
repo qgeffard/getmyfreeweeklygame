@@ -20,7 +20,8 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase()
+            game.pegi()
+                    .purchase()
                     .confirmPurchase()
                     .acceptRefund();
             System.out.println("Jeux 1 a achetez");
@@ -34,7 +35,8 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase();
+            game.pegi()
+                    .purchase();
 //                    .confirmPurchase()
 //                    .acceptRefund();
             System.out.println("Jeux 2 a achetez");
@@ -48,9 +50,10 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase();
-//                    .confirmPurchase()
-//                    .acceptRefund();
+            game.pegi()
+                    .purchase()
+                    .confirmPurchase()
+                    .acceptRefund();
             System.out.println("Jeux 3 a achetez");
             return true;
         }
@@ -62,9 +65,10 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase();
-//                    .confirmPurchase()
-//                    .acceptRefund();
+            game.pegi()
+                    .purchase()
+                    .confirmPurchase()
+                    .acceptRefund();
             System.out.println("Jeux 4 a achetez");
             return true;
         }
@@ -76,9 +80,10 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase();
-//                    .confirmPurchase()
-//                    .acceptRefund();
+            game.pegi()
+                    .purchase()
+                    .confirmPurchase()
+                    .acceptRefund();
             System.out.println("Jeux 5 a achetez");
             return true;
         }
@@ -90,7 +95,8 @@ public class StorePage implements Page {
             return true;
         } else {
             // Purchase the game
-            game.purchase()
+            game.pegi()
+                    .purchase()
                     .confirmPurchase()
                     .acceptRefund();
             System.out.println("Jeux 6 a achetez");
