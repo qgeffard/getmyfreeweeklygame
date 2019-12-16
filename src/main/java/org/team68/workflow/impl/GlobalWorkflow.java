@@ -20,20 +20,20 @@ public class GlobalWorkflow implements Workflow {
         //Hide Google Chrome
 //        Configuration.headless = true;
 
+        //login
+        log.info("Starting login workflow");
+        login.execute();
+        log.info("End login workflow");
+
         //Purchase free game
         log.info("Starting purchase workflow");
         purchase.execute();
         log.info("End purchase workflow");
 
-//        //Discord notification
+        //Discord notification
 //        log.info("Starting discord workflow");
-//        discord.execute(purchase.getGames());
+//        discord.execute();
 //        log.info("End discord workflow");
-//
-//        //login
-//        log.info("Starting login workflow");
-//        login.execute();
-//        log.info("End login workflow");
         return false;
     }
 }

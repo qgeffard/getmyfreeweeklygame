@@ -37,7 +37,9 @@ public class GamePage implements Page {
     }
 
     public GamePage acceptRefund() {
-        $x(ACCEPT_REFUND_BUTTON).click();
+        if ($x(ACCEPT_REFUND_BUTTON).exists()) {
+            $x(ACCEPT_REFUND_BUTTON).click();
+        }
         return this;
     }
 
