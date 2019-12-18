@@ -2,7 +2,8 @@ package org.team68.workflow.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.team68.model.LoginPage;
+import org.team68.model.page.LoginPage;
+import org.team68.model.User;
 import org.team68.workflow.Workflow;
 
 public class LoginWorkflow implements Workflow {
@@ -11,15 +12,15 @@ public class LoginWorkflow implements Workflow {
 
 
     @Override
-    public boolean execute() throws InterruptedException {
+    public boolean execute(User user) throws InterruptedException {
         //Open login page
         login.open();
 
         //Enter LoginEmail
-        login.email();
+        login.email(user.getLogin());
 
         //Enter Password
-        login.password();
+        login.password(user.getPassword());
 
         //click in the button Login
         login.acceptlogin();

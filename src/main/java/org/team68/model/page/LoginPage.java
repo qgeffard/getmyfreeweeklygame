@@ -1,4 +1,4 @@
-package org.team68.model;
+package org.team68.model.page;
 
 import com.codeborne.selenide.Selenide;
 import org.team68.workflow.Page;
@@ -10,23 +10,21 @@ public class LoginPage implements Page {
     public static final String EMAIL_INPUT_BOX = "//input[@id='email']";
     public static final String PASSWORD_INPUT_BOX = "//input[@id='password']";
     public static final String LOGIN_BUTTON = "//button[@id='login']";
-    public static final String USER_EMAIL = "medequent@gmail.com";
-    public static final String USER_PASSWORD = "f48273g8iuoyerfwyg987234";
 
     public LoginPage open() {
         Selenide.open(URL);
         return this;
     }
 
-    public LoginPage email() {
+    public LoginPage email(String login) {
         $x(EMAIL_INPUT_BOX).clear();
-        $x(EMAIL_INPUT_BOX).sendKeys(USER_EMAIL);
+        $x(EMAIL_INPUT_BOX).sendKeys(login);
         return this;
     }
 
-    public LoginPage password() {
+    public LoginPage password(String password) {
         $x(PASSWORD_INPUT_BOX).clear();
-        $x(PASSWORD_INPUT_BOX).sendKeys(USER_PASSWORD);
+        $x(PASSWORD_INPUT_BOX).sendKeys(password);
         return this;
     }
 
