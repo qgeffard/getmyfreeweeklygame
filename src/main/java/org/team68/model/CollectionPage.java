@@ -3,6 +3,8 @@ package org.team68.model;
 import com.codeborne.selenide.Selenide;
 import org.team68.workflow.Page;
 
+import java.util.ArrayList;
+
 import static com.codeborne.selenide.Selenide.$x;
 
 public class CollectionPage implements Page {
@@ -15,6 +17,8 @@ public class CollectionPage implements Page {
     public static final String FIFTH_FREE_GAME = "(//a[contains(@href, '/store/fr/product')])[5]";
     public static final String SIXTH_FREE_GAME = "(//a[contains(@href, '/store/fr/product')])[6]";
 //    private boolean FIRST_FREE_GAME_URL = ;
+
+    ArrayList urlGamesList = new ArrayList<String>();
 
     public CollectionPage open() {
         Selenide.open(URL);
@@ -34,7 +38,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 1 pas de jeu");
+            System.out.println("[1] Pas de jeu trouver");
         }
     }
 
@@ -46,7 +50,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 2 pas de jeu");
+            System.out.println("[2] Pas de jeu trouver");
         }
     }
 
@@ -58,7 +62,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 3 pas de jeu");
+            System.out.println("[3] Pas de jeu trouver");
         }
     }
 
@@ -70,7 +74,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 4 pas de jeu");
+            System.out.println("[4] Pas de jeu trouver");
         }
     }
 
@@ -82,7 +86,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 5 pas de jeu");
+            System.out.println("[5] Pas de jeu trouver");
         }
     }
 
@@ -94,7 +98,7 @@ public class CollectionPage implements Page {
             Thread.sleep(5000);
             System.out.println(currentFreeGameUrl + "est gratuit en ce moment");
         } else {
-            System.out.println("Vérification 6 pas de jeu");
+            System.out.println("[6] Pas de jeu trouver");
         }
     }
 }

@@ -1,10 +1,13 @@
 package org.team68.workflow.impl;
 
+import com.codeborne.selenide.Configuration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.team68.model.CollectionPage;
 import org.team68.workflow.Workflow;
 
 import java.io.IOException;
+import java.util.Collection;
 
 
 public class GlobalWorkflow implements Workflow {
@@ -13,6 +16,8 @@ public class GlobalWorkflow implements Workflow {
     private LoginWorkflow login = new LoginWorkflow();
     private PurchaseWorkflow purchase = new PurchaseWorkflow();
     private DiscordWorkflow discord = new DiscordWorkflow();
+    private KeepassWorkflow keepass = new KeepassWorkflow();
+    private CollectionPage collection = new CollectionPage();
 
     @Override
     public boolean execute() throws InterruptedException, IOException {
